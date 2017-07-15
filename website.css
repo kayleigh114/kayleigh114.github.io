@@ -1,0 +1,60 @@
+body {
+  font-family:sans-serif;
+  margin: 0;
+  display: block;
+  background-color: #FCF4F4;
+}
+
+#topText {
+  text-shadow: .75px .75px pink;
+  text-align: center;
+  border: 1px black solid;
+  background-color: #F6D2F9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: .75px .75px grey;
+  font-size: 12px;
+  color: white;
+}
+
+#texted {
+  color: black;
+  position: inherit;
+  width: 90%;
+  margin: 70px auto;
+}
+
+#fixedImage {
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+}
+
+img {
+  width: 20%;
+  height: auto;
+  display: block;
+  border: 1px pink solid;
+  margin: auto 5px;
+
+}
+
+#resume {
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  text-align: left;
+  padding: 40px 55px;
+  text-shadow: .25px .25px #DF5959;
+  font-size: 22px;
+  font-family: Garamond;
+  border: 1px black solid;
+  box-shadow: 1px .5px black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
