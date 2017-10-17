@@ -3,28 +3,25 @@
   <meta charset="UTF-8">
   <title>Kayleigh</title>
   <link rel="stylesheet" type="text/css" href="src/styles/styles.css">
+  <script src="src/script/game.js"></script>
 </head>
 
-<body>
+<body onload="startGame()">
   <div id="navbar">
     <nav>
       <ul>
         <li id="home"><a href="index.html">Kayleigh</a></li>
-        <li id="games"><a href="games.html">Games</a></li>
         <li id="codepen"><a href="https://codepen.io/kayleigh114" target="_blank">CodePen</a></li>
         <li id="github"><a href="https://github.com/kayleigh114" target="_blank">GitHub</a></li>
       </ul>
     </nav>
   </div>
-  <div id="container">
-    <div id="aboutme">
-      <p id="aboutmetext">
-        Front-End Developer based in Austin, Texas.
-      </p>
-    <div>
+  <div>
+    <div id="canvasHere"></div>
   </div>
-  <script src="src/script/all.js"></script>
-
+  <div style="text-align:center;width:480px;">
+  <button onmousedown="clearmove()" onmouseup="moveright()" ontouchstart="clearmove()">STOP</button><br><br>
+</div>
 </body>
 
 </html>
