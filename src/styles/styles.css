@@ -4,14 +4,13 @@
 }
 
 #aboutme {
-  position: absolute;
   width: 100%;
   height: 100%;
 }
 
 #aboutmetext {
   position: absolute;
-  top: 45px;
+  top: 85px;
   right: 40px;
   width: 550px;
   font-size: 25px;
@@ -31,7 +30,7 @@
 
 #home, #codepen, #github, #games {
   border-right: 1.5px solid green;
-  font-size: 1.5em;
+  font-size: 20px;
 }
 
 a {
@@ -63,28 +62,106 @@ nav ul li {
   padding: 0 15px;
 }
 
-@media screen and (max-width: 500px) {
-  #codepen, #github, #games {
-    display: none;
+#all {
+  display: inline-block;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #FCF2FC;
+}
+
+#canvasHere {
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+}
+
+#buttons {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 450px) {
+  nav {
+    padding: 0;
   }
+
+  button {
+    background: #F2FAFC;
+  }
+
   #home {
-    border: none;
-    width: 80%;
-    margin: auto;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    border: 0;
   }
+
+  #games {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    border: 0;
+  }
+
+  #codepen > a, #github > a {
+
+  }
+
+  #github {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    border: 0;
+}
+
+  #codepen {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    border: 0;
+  }
+
   #aboutmetext {
     width: 100%;
     text-align: center;
     right: 0;
     font-size: 20px;
-    padding: 10px;
+    padding: 45px;
   }
 }
 
-@media screen and (min-width: 501px) and (max-width: 700px) {
+@media only screen and (min-width: 451px) and (max-width: 600px) {
+  nav {
+    padding: 0;
+  }
 
-}
+  button {
+    background: #F2FAFC;
+  }
 
-@media screen and (min-width: 701px) and (max-width: 1500px) {
+  #home, #codepen, #github, #games {
+    border: 1px solid green;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    width: 25%;
+    padding: 5px 0;
+  }
 
+  #aboutmetext {
+    width: 100%;
+    text-align: center;
+    right: 5px;
+    font-size: 20px;
+    padding: 60px;
+  }
 }

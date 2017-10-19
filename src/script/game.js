@@ -1,14 +1,14 @@
 var myGamePiece;
 
 function startGame() {
-    myGamePiece = new component(40, 40, "src/img/garyPiece.png", 10, 120, "image");
+    myGamePiece = new component(70, 75, "src/img/garyPiece.png", 10, 120, "image");
     myGameArea.start();
 }
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 580;
+        this.canvas.width = 600;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
         document.getElementById("canvasHere").appendChild(this.canvas);
@@ -31,7 +31,7 @@ function component(width, height, color, x, y, type) {
     }
     this.width = width;
     this.height = height;
-    this.speedX = 1;
+    this.speedX = 0;
     this.speedY = 0;
     this.x = x;
     this.y = y;
