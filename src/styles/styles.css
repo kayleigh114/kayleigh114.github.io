@@ -24,10 +24,6 @@
   background-size: cover;
 }
 
-.onpage {
-  color: pink;
-}
-
 #home, #codepen, #github, #games {
   border-right: 1.5px solid green;
   font-size: 20px;
@@ -50,6 +46,7 @@ a:visited {
 nav {
   padding: 10px;
   border: 1px solid green;
+  background: white;
 }
 
 nav ul {
@@ -62,31 +59,34 @@ nav ul li {
   padding: 0 15px;
 }
 
+.onpage {
+  color: pink;
+}
+
 #all {
   display: inline-block;
   padding: 20px;
   width: 100%;
-  height: 100%;
   text-align: center;
-  background-color: #FCF2FC;
 }
 
 #canvasHere {
   width: 100%;
   display: inline-block;
-  padding: 10px;
   text-align: center;
 }
 
 button {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  font-size: 8px;
 }
 
 #buttons {
-  text-align: center;
-  width: 100%;
-  display: inline-block;
+  width: 90%;
+  position: absolute;
+  bottom: 8%;
 }
 
 @media only screen and (max-width: 450px) {
@@ -94,8 +94,16 @@ button {
     padding: 0;
   }
 
+  canvas {
+    max-width: 100%;
+  }
+
+  #instructions {
+    display: none;
+  }
+
   button {
-    background: #F2FAFC;
+    background: white;
   }
 
   #home {
@@ -110,10 +118,6 @@ button {
     top: 10px;
     right: 5px;
     border: 0;
-  }
-
-  #codepen > a, #github > a {
-
   }
 
   #github {
@@ -144,17 +148,27 @@ button {
     padding: 0;
   }
 
+  #instructions {
+    display: none;
+  }
+
   button {
-    background: #F2FAFC;
+    background: white;
+  }
+
+  canvas {
+    max-width: 70%;
   }
 
   #home, #codepen, #github, #games {
-    border: 1px solid green;
+    border: none;
+    border-bottom: 1px solid green;
     float: left;
     text-align: center;
     font-size: 20px;
     width: 25%;
     padding: 5px 0;
+    background: white;
   }
 
   #aboutmetext {
@@ -163,5 +177,23 @@ button {
     right: 5px;
     font-size: 20px;
     padding: 60px;
+  }
+}
+
+.noscroll {
+  background: #e0f2da;
+}
+
+@media only screen and (min-width: 601px) {
+  .noscroll {
+    position: fixed;
+    overflow-y: hidden;
+    width: 100%;
+    background-color: #FCF2FC;
+  }
+  #buttons {
+    position: relative;
+    margin: auto;
+    bottom: -22px;
   }
 }

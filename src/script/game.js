@@ -1,15 +1,15 @@
 var myGamePiece;
 
 function startGame() {
-    myGamePiece = new component(70, 75, "src/img/garyPiece.png", 10, 120, "image");
+    myGamePiece = new component(40, 40, "src/img/garyPiece.png", 10, 120, "image");
     myGameArea.start();
 }
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 600;
-        this.canvas.height = 270;
+        this.canvas.width = 550;
+        this.canvas.height = 250;
         this.context = this.canvas.getContext("2d");
         document.getElementById("canvasHere").appendChild(this.canvas);
         this.frameNo = 0;
@@ -78,4 +78,19 @@ function moveright() {
 function clearmove() {
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
+}
+
+function uniKeyCode(event) {
+    var key = event.keyCode;
+    if (key == 32) {
+      clearmove();
+    } else if (key == 37) {
+      moveleft();
+    } else if (key == 38) {
+      moveup();
+    } else if (key == 39) {
+      moveright();
+    } else if (key == 40) {
+      movedown();
+    }
 }
