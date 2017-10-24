@@ -9,7 +9,7 @@ var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 550;
-        this.canvas.height = 250;
+        this.canvas.height = 350;
         this.context = this.canvas.getContext("2d");
         document.getElementById("canvasHere").appendChild(this.canvas);
         this.frameNo = 0;
@@ -50,6 +50,11 @@ function component(width, height, color, x, y, type) {
     this.newPos = function() {
         this.x += this.speedX;
         this.y += this.speedY;
+        if (this.type == "background") {
+            if (this.x == -(this.width)) {
+                this.x = 0;
+            }
+        }
     }
 }
 
