@@ -3,10 +3,6 @@
   margin: 0;
 }
 
-#name {
-  font-family: fantasy;
-}
-
 canvas {
   background: white;
   border: 1px solid black;
@@ -104,7 +100,42 @@ button {
   bottom: 8%;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 210px) {
+  nav {
+    text-align: center;
+  }
+
+  #home {
+    border: 0;
+    padding: 0;
+  }
+
+  #linkedin {
+    position: fixed;
+    bottom: 10px;
+    padding: 0;
+    display: flex;
+    border: 0;
+  }
+
+  #github {
+    display: none;
+  }
+
+  #codepen {
+    display: none;
+  }
+
+  #aboutmetext {
+    width: 100%;
+    text-align: center;
+    right: 0;
+    font-size: 20px;
+    padding: 30px;
+  }
+}
+
+@media only screen and (min-width: 211px) and (max-width: 450px) {
   nav {
     padding: 0;
   }
@@ -155,7 +186,7 @@ button {
     text-align: center;
     right: 0;
     font-size: 20px;
-    padding: 20px;
+    padding: 30px;
   }
 }
 
